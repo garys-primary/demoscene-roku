@@ -7,3 +7,5 @@ ui_resolutions=fhd
 supports_input_launch=1
 bs_const=debug=true
 catalog_url=__CATALOG_URL__
+mm_icon_focus_fhd=pkg:/content/logo_fhd.png
+mm_icon_focus_hd=pkg:/content/logo_hd.png

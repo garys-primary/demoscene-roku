@@ -39,6 +39,11 @@
         "h264": "__MEDIA_BASE_URL__/media/03_red_sector_inc-rsi_megademo/master.m3u8",
         "hevc": ""
       },
+      "parts": [0, 263, 525, 818, 1203, 1452, 1740],
+      "guide": {
+        "start": 525,
+        "text": "Red Sector Inc.'s 1989 Megademo shows the Amiga demoscene moving beyond simple crack intros into full audiovisual productions. Here you can see early real-time 3D, vector objects and particle-like effects that were impressive on an Amiga 500-class machine. The soundtrack uses the Amiga's four-channel sampled-audio hardware."
+      },
       "quickGuide": []
     },
     {
@@ -53,6 +58,10 @@
       "streams": {
         "h264": "__MEDIA_BASE_URL__/media/04_scoopex-mental_hangover/master.m3u8",
         "hevc": ""
+      },
+      "guide": {
+        "start": 118,
+        "text": "Only a year later, Scoopex's Mental Hangover shows a major jump in both 3D complexity and presentation. Instead of a collection of separate demo screens, effects flow continuously into one another, with more elaborate rotating objects, calculated transformations and bitmap graphics integrated into the sequence. Mental Hangover helped establish the trackmo format: a continuously streaming, directed demo rather than a menu of independent parts."
       },
       "quickGuide": []
     },
@@ -69,6 +78,10 @@
         "h264": "__MEDIA_BASE_URL__/media/06_jesus_on_es/master.m3u8",
         "hevc": ""
       },
+      "guide": {
+        "start": 0,
+        "text": "Jesus on E's takes a very different direction. Instead of treating music as accompaniment to graphical effects, the production is essentially a 27-minute rave audiovisual show, with rapidly changing real-time graphics synchronized to a continuous techno soundtrack. Released in 1992, it shows how the demoscene was absorbing contemporary rave, sampling and VJ culture."
+      },
       "quickGuide": []
     },
     {
@@ -83,6 +96,10 @@
       "streams": {
         "h264": "__MEDIA_BASE_URL__/media/07_spaceballs_state_of_the_art/master.m3u8",
         "hevc": ""
+      },
+      "guide": {
+        "start": 0,
+        "text": "State of the Art became one of the most famous Amiga demos of the era. Spaceballs recorded real dancers, traced their movement and converted it into animated graphical silhouettes, then synchronized them tightly to techno music. Combined with bold typography, geometric patterns and concentric animated rings, it made the demo feel more like a music video than a traditional technical showcase. In 1992, producing this fluid animation in real time required aggressive use of the Amiga's graphics hardware."
       },
       "quickGuide": []
     },
@@ -99,6 +116,10 @@
         "h264": "__MEDIA_BASE_URL__/media/08_kefens-desert_dream/master.m3u8",
         "hevc": ""
       },
+      "guide": {
+        "start": 28,
+        "text": "By 1993, Kefrens' Desert Dream shows the classic Amiga demo reaching a much more cinematic scale. Real-time 3D scenes, dot landscapes and tunnels are mixed with carefully drawn bitmap artwork, transitions and synchronized music. Rather than demonstrating one isolated effect, the production uses 3D as part of a longer visual narrative."
+      },
       "quickGuide": []
     },
     {
@@ -114,6 +135,10 @@
         "h264": "__MEDIA_BASE_URL__/media/11_acme-303/master.m3u8",
         "hevc": ""
       },
+      "guide": {
+        "start": 175,
+        "text": "By 1997, PC demos such as Acme's 303 could manipulate far more complex real-time 3D surfaces. Here, reflective-looking materials, distortion and continuously transforming geometry demonstrate the transition from simple polygon demonstrations toward full software-rendered visual environments. 303 also puts much greater emphasis on design, editing and synchronization rather than showing effects in isolation."
+      },
       "quickGuide": []
     },
     {
@@ -128,6 +153,10 @@
       "streams": {
         "h264": "__MEDIA_BASE_URL__/media/12_heaven_seven-exceed/master.m3u8",
         "hevc": ""
+      },
+      "guide": {
+        "start": 36,
+        "text": "Heaven Seven demonstrates a completely different kind of technical constraint. This entire 2000 production - executable code, generated graphics, animation and music - fits within a 64-kilobyte intro. Most strikingly, it performs real-time ray tracing, calculating lighting, reflections and 3D imagery while the demo runs. Effects that normally required pre-rendered CGI were now being generated live inside an executable smaller than many single image files."
       },
       "quickGuide": []
     },

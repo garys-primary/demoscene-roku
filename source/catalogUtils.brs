@@ -50,6 +50,22 @@ function HasNextExhibit(catalog as Dynamic, exhibitIndex as Integer) as Boolean
     return exhibitIndex + 1 < ExhibitCount(catalog)
 end function
 
+function FirstGuideExhibitIndex(catalog as Dynamic) as Integer
+    return NextGuideExhibitIndex(catalog, -1)
+end function
+
+function NextGuideExhibitIndex(catalog as Dynamic, exhibitIndex as Integer) as Integer
+    nextIndex = exhibitIndex + 1
+    while nextIndex < ExhibitCount(catalog)
+        exhibit = ExhibitAt(catalog, nextIndex)
+        if exhibit <> invalid
+            if exhibit.guide <> invalid then return nextIndex
+        end if
+        nextIndex++
+    end while
+    return -1
+end function
+
 function Pad2(value as Dynamic) as String
     number = Int(value)
     if number < 0 then number = 0

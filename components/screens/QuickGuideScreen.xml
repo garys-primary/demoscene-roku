@@ -5,7 +5,7 @@
         <field id="catalog" type="assocarray" onChange="configureGuide" />
         <field id="navEvent" type="assocarray" alwaysNotify="true" />
     </interface>
-    <script type="text/brightscript" uri="pkg:/source/brs/utils/catalogUtils.brs" />
+    <script type="text/brightscript" uri="pkg:/source/catalogUtils.brs" />
     <script type="text/brightscript" uri="pkg:/components/screens/QuickGuideScreen.brs" />
 
     <children>

@@ -29,6 +29,35 @@ foreach ($Exhibit in $Catalog.exhibits) {
     if (-not $Exhibit.streams.h264.StartsWith("__MEDIA_BASE_URL__/media/")) {
         throw "Exhibit $($Exhibit.id) must use the media URL placeholder."
     }
+    if ($null -ne $Exhibit.parts) {
+        $Parts = @($Exhibit.parts)
+        if ($Parts.Count -lt 2) {
+            throw "Exhibit $($Exhibit.id) parts must contain at least two timestamps."
+        }
+        if ([double]$Parts[0] -ne 0) {
+            throw "Exhibit $($Exhibit.id) parts must begin at 0 seconds."
+        }
+
+        $PreviousPart = -1.0
+        foreach ($Part in $Parts) {
+            if (-not ($Part -is [ValueType]) -or $Part -is [bool]) {
+                throw "Exhibit $($Exhibit.id) part timestamps must be numeric."
+            }
+            $PartSeconds = [double]$Part
+            if ($PartSeconds -lt 0 -or $PartSeconds -le $PreviousPart) {
+                throw "Exhibit $($Exhibit.id) part timestamps must be nonnegative and strictly ascending."
+            }
+            $PreviousPart = $PartSeconds
+        }
+    }
+    if ($null -ne $Exhibit.guide) {
+        if ($null -eq $Exhibit.guide.start -or -not ($Exhibit.guide.start -is [ValueType]) -or $Exhibit.guide.start -is [bool]) {
+            throw "Exhibit $($Exhibit.id) guide start must be numeric."
+        }
+        if ([double]$Exhibit.guide.start -lt 0 -or -not $Exhibit.guide.text) {
+            throw "Exhibit $($Exhibit.id) guide needs a nonnegative start and narration text."
+        }
+    }
     foreach ($Chapter in $Exhibit.quickGuide) {
         if ($Chapter.start -lt 0 -or $Chapter.end -le $Chapter.start -or -not $Chapter.text) {
             throw "Invalid Quick Guide range in $($Exhibit.id)."

@@ -48,10 +48,15 @@ function BuildStoryline() as Object
                 }
             }
             quickGuide: {
-                component: "QuickGuideScreen"
+                component: "PlayerScreen"
+                params: {
+                    mode: "guide"
+                    origin: "guide"
+                }
                 on: {
-                    complete: "mainMenu"
-                    cancel: "mainMenu"
+                    advance: "quickGuide"
+                    backToInfo: "mainMenu"
+                    endToMenu: "mainMenu"
                 }
             }
             explore: {

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <component name="MainMenuScreen" extends="Group">
     <interface>
+        <field id="catalog" type="assocarray" />
         <field id="navEvent" type="assocarray" alwaysNotify="true" />
     </interface>
-    <script type="text/brightscript" uri="pkg:/source/brs/utils/catalogUtils.brs" />
+    <script type="text/brightscript" uri="pkg:/source/catalogUtils.brs" />
     <script type="text/brightscript" uri="pkg:/components/screens/MainMenuScreen.brs" />
 
     <children>
@@ -44,6 +45,16 @@
             height="50"
             color="0x777777FF">
             <Font role="font" uri="pkg:/assets/fonts/ShareTechMono-Regular.ttf" size="24" />
+        </Label>
+
+        <Label
+            text="garys // 2026"
+            translation="[0, 980]"
+            width="1920"
+            height="50"
+            horizAlign="center"
+            color="0x77777777">
+            <Font role="font" uri="pkg:/assets/fonts/ShareTechMono-Regular.ttf" size="19" />
         </Label>
     </children>
 </component>

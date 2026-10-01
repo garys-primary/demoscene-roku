@@ -4,7 +4,7 @@
         <field id="control" type="string" alwaysNotify="true" onChange="onControlChanged" />
         <field id="navEvent" type="assocarray" alwaysNotify="true" />
     </interface>
-    <script type="text/brightscript" uri="pkg:/source/brs/utils/catalogUtils.brs" />
+    <script type="text/brightscript" uri="pkg:/source/catalogUtils.brs" />
     <script type="text/brightscript" uri="pkg:/components/screens/BootScreen.brs" />
 
     <children>

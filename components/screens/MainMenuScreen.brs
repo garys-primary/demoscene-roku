@@ -43,7 +43,14 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
                 autoplay: true
             })
         else if m.selection = 1
-            EmitNavEvent(m.top, "quickGuide", invalid)
+            guideIndex = FirstGuideExhibitIndex(m.top.catalog)
+            if guideIndex >= 0
+                EmitNavEvent(m.top, "quickGuide", {
+                    exhibitIndex: guideIndex
+                    origin: "guide"
+                    mode: "guide"
+                })
+            end if
         else
             EmitNavEvent(m.top, "browse", invalid)
         end if

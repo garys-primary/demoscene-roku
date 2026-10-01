@@ -3,43 +3,142 @@
     <interface>
         <field id="exhibitIndex" type="integer" value="0" />
         <field id="origin" type="string" value="playAll" />
+        <field id="mode" type="string" value="exhibition" />
         <field id="catalog" type="assocarray" />
         <field id="control" type="string" alwaysNotify="true" onChange="onControlChanged" />
         <field id="navEvent" type="assocarray" alwaysNotify="true" />
     </interface>
-    <script type="text/brightscript" uri="pkg:/source/brs/utils/catalogUtils.brs" />
+    <script type="text/brightscript" uri="pkg:/source/catalogUtils.brs" />
     <script type="text/brightscript" uri="pkg:/components/screens/PlayerScreen.brs" />
 
     <children>
         <Video id="video" width="1920" height="1080" enableUI="false" notificationInterval="0.5" />
 
         <Group id="chromeGroup">
-            <Rectangle id="chrome" translation="[0, 900]" width="1920" height="180" color="0x000000B0" />
-            <Label id="nowLabel" translation="[90, 924]" width="1080" height="48" color="0xFFFFFFFF">
-                <Font role="font" uri="pkg:/assets/fonts/ShareTechMono-Regular.ttf" size="28" />
-            </Label>
-            <Label id="statusLabel" translation="[90, 978]" width="1080" height="40" color="0xBBBBBBFF">
-                <Font role="font" uri="pkg:/assets/fonts/ShareTechMono-Regular.ttf" size="22" />
-            </Label>
+            <Group id="normalChrome">
+                <Rectangle id="chrome" translation="[0, 900]" width="1920" height="180" color="0x000000B0" />
+                <Label
+                    id="nowLabel"
+                    translation="[90, 924]"
+                    width="1080"
+                    height="48"
+                    color="0xFFFFFFFF">
+                    <Font role="font" uri="pkg:/assets/fonts/ShareTechMono-Regular.ttf" size="28" />
+                </Label>
+                <Label
+                    id="statusLabel"
+                    translation="[90, 978]"
+                    width="1080"
+                    height="40"
+                    color="0xBBBBBBFF">
+                    <Font role="font" uri="pkg:/assets/fonts/ShareTechMono-Regular.ttf" size="22" />
+                </Label>
 
-            <Rectangle
-                id="nextFocus"
-                translation="[1288, 948]"
-                width="500"
-                height="84"
-                color="0xFFFFFFFF"
-                opacity="0.16" />
-            <Label
-                id="nextLabel"
-                text="NEXT EXHIBIT"
-                translation="[1288, 948]"
-                width="500"
-                height="84"
-                horizAlign="center"
-                vertAlign="center"
-                color="0xFFFFFFFF">
-                <Font role="font" uri="pkg:/assets/fonts/ShareTechMono-Regular.ttf" size="28" />
-            </Label>
+                <Group id="partButton" translation="[1070, 948]" visible="false">
+                    <Rectangle
+                        id="partFocus"
+                        width="340"
+                        height="84"
+                        color="0xFFFFFFFF"
+                        opacity="0.28" />
+                    <Label
+                        id="partLabel"
+                        text="NEXT PART"
+                        width="340"
+                        height="84"
+                        horizAlign="center"
+                        vertAlign="center"
+                        color="0xFFFFFFFF">
+                        <Font role="font" uri="pkg:/assets/fonts/ShareTechMono-Regular.ttf" size="28" />
+                    </Label>
+                </Group>
+
+                <Group id="exhibitButton" translation="[1288, 948]">
+                    <Rectangle
+                        id="nextFocus"
+                        width="500"
+                        height="84"
+                        color="0xFFFFFFFF"
+                        opacity="0.16" />
+                    <Label
+                        id="nextLabel"
+                        text="NEXT EXHIBIT"
+                        width="500"
+                        height="84"
+                        horizAlign="center"
+                        vertAlign="center"
+                        color="0xFFFFFFFF">
+                        <Font role="font" uri="pkg:/assets/fonts/ShareTechMono-Regular.ttf" size="28" />
+                    </Label>
+                </Group>
+            </Group>
+
+            <Group id="guideChrome" visible="false">
+                <Rectangle translation="[90, 600]" width="1740" height="400" color="0x000000D8" />
+                <Label
+                    id="guideTitle"
+                    translation="[140, 630]"
+                    width="1640"
+                    height="48"
+                    color="0xFFFFFFFF">
+                    <Font role="font" uri="pkg:/assets/fonts/ShareTechMono-Regular.ttf" size="29" />
+                </Label>
+                <Label
+                    id="guideText"
+                    translation="[140, 690]"
+                    width="1640"
+                    height="170"
+                    wrap="true"
+                    color="0xE8E8E8FF">
+                    <Font role="font" uri="pkg:/assets/fonts/ShareTechMono-Regular.ttf" size="25" />
+                </Label>
+                <Label
+                    id="guideHint"
+                    text="DOWN TO HIDE INFO"
+                    translation="[140, 865]"
+                    width="700"
+                    height="32"
+                    color="0x999999FF">
+                    <Font role="font" uri="pkg:/assets/fonts/ShareTechMono-Regular.ttf" size="21" />
+                </Label>
+
+                <Group id="guideRestartButton" translation="[930, 910]">
+                    <Rectangle
+                        id="guideRestartFocus"
+                        width="400"
+                        height="64"
+                        color="0xFFFFFFFF"
+                        opacity="0.08" />
+                    <Label
+                        text="PLAY FROM BEGINNING"
+                        width="400"
+                        height="64"
+                        horizAlign="center"
+                        vertAlign="center"
+                        color="0xFFFFFFFF">
+                        <Font role="font" uri="pkg:/assets/fonts/ShareTechMono-Regular.ttf" size="25" />
+                    </Label>
+                </Group>
+
+                <Group id="guideNextButton" translation="[1350, 910]">
+                    <Rectangle
+                        id="guideNextFocus"
+                        width="430"
+                        height="64"
+                        color="0xFFFFFFFF"
+                        opacity="0.28" />
+                    <Label
+                        id="guideNextLabel"
+                        text="NEXT EXHIBIT"
+                        width="430"
+                        height="64"
+                        horizAlign="center"
+                        vertAlign="center"
+                        color="0xFFFFFFFF">
+                        <Font role="font" uri="pkg:/assets/fonts/ShareTechMono-Regular.ttf" size="25" />
+                    </Label>
+                </Group>
+            </Group>
         </Group>
 
         <Animation id="chromeAppears" duration="0.15">

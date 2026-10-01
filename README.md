@@ -1,7 +1,7 @@
 # Roku Virtual Gallery Dedicated to 90s and early 2000s Demoscene 
   
-A private channel can be installed with this link:  
-  
+The private channel can be installed with this link:  https://my.roku.com/account/add/demo (enter code DEMO)  
+    
 This channel features a bit different approach to organizing SceneGraph.  
 It contains storyline.brs that encodes exhibit flow as well as navigation.brs that encodes user navigation options in clean and easy to edit format.
 

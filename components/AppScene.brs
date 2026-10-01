@@ -11,6 +11,7 @@ sub init()
     m.catalogTask.ObserveField("error", "onCatalogErrorChanged")
 
     catalog = LoadBundledCatalog()
+    m.bundledCatalog = catalog
     storyline = BuildStoryline()
     m.navigator = CreateNavigator(m.layer, storyline)
     m.navigator.setCatalog(catalog)
@@ -22,12 +23,12 @@ sub init()
 
     m.testPlayback = false
     ' ==== TEST ====
-    ' Set m.testPlayback = true to open exhibit 01 immediately on launch.
+    ' Set m.testPlayback = true to open exhibit 03 immediately on launch.
     ' m.testPlayback = true
     ' ==== TEST ====
     if m.testPlayback = true
-        print "TEST playback launch exhibit 0"
-        m.navigator.mount("player", { exhibitIndex: 0, origin: "playAll" })
+        print "TEST guide launch exhibit 1"
+        m.navigator.mount("quickGuide", { exhibitIndex: 1, origin: "guide", mode: "guide" })
     else
         m.navigator.mount(storyline.initialRoute, invalid)
     end if
@@ -81,9 +82,22 @@ end sub
 sub onRemoteCatalogChanged()
     catalog = m.catalogTask.result
     if catalog <> invalid
+        MergeBundledPlaybackMetadata(catalog)
         print "Using remote catalog"
         m.navigator.setCatalog(catalog)
     end if
+end sub
+
+sub MergeBundledPlaybackMetadata(catalog as Dynamic)
+    if m.bundledCatalog = invalid or catalog.exhibits = invalid then return
+
+    for each exhibit in catalog.exhibits
+        bundledExhibit = FindExhibit(m.bundledCatalog, exhibit.id)
+        if bundledExhibit <> invalid
+            if bundledExhibit.parts <> invalid then exhibit.parts = bundledExhibit.parts
+            if bundledExhibit.guide <> invalid then exhibit.guide = bundledExhibit.guide
+        end if
+    end for
 end sub
 
 sub onCatalogErrorChanged()
