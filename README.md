@@ -1,9 +1,6 @@
-# Roku Virtual Gallery Dedicated to 90s and early 2000s Demoscene 
+# Roku Virtual Gallery Dedicated to Demoscene
   
 The private channel can be installed with this link:  https://my.roku.com/account/add/demo (enter code DEMO)  
-    
-This channel features a bit different approach to organizing SceneGraph.  
-It contains storyline.brs that encodes exhibit flow as well as navigation.brs that encodes user navigation options in clean and easy to edit format.
 
 Please enjoy your interactive journey!
 
@@ -17,17 +14,8 @@ Please enjoy your interactive journey!
 
 ## Content configuration
 
-Production hostnames are intentionally absent from source control. `content/catalog.template.json` and `manifest` contain placeholders; `scripts/package.ps1` replaces them with `MEDIA_BASE_URL` and `CATALOG_URL` from the ignored `.env` file. The rendered catalog is bundled as the offline fallback and is also used by `scripts/upload-media.ps1`.
-
-## Project map
-
-- `source/storyline.brs` — readable route tree.
-- `source/navigation.brs` — screen registry and transitions.
-- `components/screens/` — one SceneGraph component per screen.
-- `content/` — catalog schema and local fixture.
-- `infra/` — repeatable Ubuntu/nginx origin setup.
-- `scripts/` — packaging, sideloading, encoding, upload, and validation.
-- `docs/` — decisions, handoff state, and device checklist.
-
-
+THe media is too large to be included here.  
+It has been rendered from emulators.
+The gallery is going to grow until it encapsulates all significant demos.  
+  
 Made with love to code and to early CGI. (C) garys 2026
