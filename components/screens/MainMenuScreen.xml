@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="MainMenuScreen" extends="Group">
+    <interface>
+        <field id="navEvent" type="assocarray" alwaysNotify="true" />
+    </interface>
+    <script type="text/brightscript" uri="pkg:/source/brs/utils/catalogUtils.brs" />
+    <script type="text/brightscript" uri="pkg:/components/screens/MainMenuScreen.brs" />
+
+    <children>
+        <Rectangle width="1920" height="1080" color="0x000000FF" />
+        <Label text="DEMOSCENE" translation="[180, 150]" width="1560" height="100" color="0xFFFFFFFF">
+            <Font role="font" uri="pkg:/assets/fonts/ShareTechMono-Regular.ttf" size="72" />
+        </Label>
+        <Label
+            text="A GUIDED EXHIBITION OF CODE, IMAGE, AND SOUND"
+            translation="[184, 255]"
+            width="1400"
+            height="60"
+            color="0xA8A8A8FF">
+            <Font role="font" uri="pkg:/assets/fonts/ShareTechMono-Regular.ttf" size="28" />
+        </Label>
+
+        <Rectangle
+            id="focusBar"
+            translation="[165, 470]"
+            width="760"
+            height="90"
+            color="0xFFFFFFFF"
+            opacity="0.14" />
+        <Label id="playLabel" text="01  PLAY ALL" translation="[190, 470]" width="720" height="90" vertAlign="center" color="0xFFFFFFFF">
+            <Font role="font" uri="pkg:/assets/fonts/ShareTechMono-Regular.ttf" size="38" />
+        </Label>
+        <Label id="guideLabel" text="02  QUICK GUIDE" translation="[190, 590]" width="720" height="90" vertAlign="center" color="0xC8C8C8FF">
+            <Font role="font" uri="pkg:/assets/fonts/ShareTechMono-Regular.ttf" size="38" />
+        </Label>
+        <Label id="browseLabel" text="03  BROWSE" translation="[190, 710]" width="720" height="90" vertAlign="center" color="0xC8C8C8FF">
+            <Font role="font" uri="pkg:/assets/fonts/ShareTechMono-Regular.ttf" size="38" />
+        </Label>
+
+        <Label
+            text="UP/DOWN TO CHOOSE   •   OK TO ENTER"
+            translation="[184, 880]"
+            width="1000"
+            height="50"
+            color="0x777777FF">
+            <Font role="font" uri="pkg:/assets/fonts/ShareTechMono-Regular.ttf" size="24" />
+        </Label>
+    </children>
+</component>

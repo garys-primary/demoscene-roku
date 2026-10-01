@@ -1,0 +1,31 @@
+# Roku packages and generated media
+build/
+dist/
+*.pkg
+*.zip
+media/
+*.m3u8
+*.ts
+*.m4s
+node_modules/
+
+# Secrets and local operator settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+infra/inventory.local
+scripts/local.settings.ps1
+
+# Editors and operating systems
+.DS_Store
+Thumbs.db
+.vscode/
+
+/media-src
+demo_list.txt
+/docs
+/assets/fonts
+ssh.ps1
+todo.txt

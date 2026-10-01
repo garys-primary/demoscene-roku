@@ -1,0 +1,9 @@
+title=Demoscene
+subtitle=A guided exhibition
+major_version=0
+minor_version=1
+build_version=0
+ui_resolutions=fhd
+supports_input_launch=1
+bs_const=debug=true
+catalog_url=__CATALOG_URL__

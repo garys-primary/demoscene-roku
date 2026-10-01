@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="PlayerScreen" extends="Group">
+    <interface>
+        <field id="exhibitIndex" type="integer" value="0" />
+        <field id="origin" type="string" value="playAll" />
+        <field id="catalog" type="assocarray" />
+        <field id="control" type="string" alwaysNotify="true" onChange="onControlChanged" />
+        <field id="navEvent" type="assocarray" alwaysNotify="true" />
+    </interface>
+    <script type="text/brightscript" uri="pkg:/source/brs/utils/catalogUtils.brs" />
+    <script type="text/brightscript" uri="pkg:/components/screens/PlayerScreen.brs" />
+
+    <children>
+        <Video id="video" width="1920" height="1080" enableUI="false" notificationInterval="0.5" />
+
+        <Group id="chromeGroup">
+            <Rectangle id="chrome" translation="[0, 900]" width="1920" height="180" color="0x000000B0" />
+            <Label id="nowLabel" translation="[90, 924]" width="1080" height="48" color="0xFFFFFFFF">
+                <Font role="font" uri="pkg:/assets/fonts/ShareTechMono-Regular.ttf" size="28" />
+            </Label>
+            <Label id="statusLabel" translation="[90, 978]" width="1080" height="40" color="0xBBBBBBFF">
+                <Font role="font" uri="pkg:/assets/fonts/ShareTechMono-Regular.ttf" size="22" />
+            </Label>
+
+            <Rectangle
+                id="nextFocus"
+                translation="[1288, 948]"
+                width="500"
+                height="84"
+                color="0xFFFFFFFF"
+                opacity="0.16" />
+            <Label
+                id="nextLabel"
+                text="NEXT EXHIBIT"
+                translation="[1288, 948]"
+                width="500"
+                height="84"
+                horizAlign="center"
+                vertAlign="center"
+                color="0xFFFFFFFF">
+                <Font role="font" uri="pkg:/assets/fonts/ShareTechMono-Regular.ttf" size="28" />
+            </Label>
+        </Group>
+
+        <Animation id="chromeAppears" duration="0.15">
+            <FloatFieldInterpolator
+                key="[0,1]"
+                keyValue="[0,1]"
+                fieldToInterp="chromeGroup.opacity"
+            />
+        </Animation>
+        
+        <Animation id="chromeDisappears" duration="0.15">
+            <FloatFieldInterpolator
+                key="[0,1]"
+                keyValue="[1,0]"
+                fieldToInterp="chromeGroup.opacity"
+            />
+        </Animation>
+    </children>
+</component>

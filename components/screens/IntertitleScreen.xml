@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="IntertitleScreen" extends="Group">
+    <interface>
+        <field id="text" type="string" />
+        <field id="holdMs" type="integer" value="2500" />
+        <field id="control" type="string" alwaysNotify="true" onChange="onControlChanged" />
+        <field id="navEvent" type="assocarray" alwaysNotify="true" />
+    </interface>
+    <script type="text/brightscript" uri="pkg:/source/brs/utils/catalogUtils.brs" />
+    <script type="text/brightscript" uri="pkg:/components/screens/IntertitleScreen.brs" />
+
+    <children>
+        <Rectangle width="1920" height="1080" color="0x000000FF" />
+        <Label
+            id="intertitleLabel"
+            translation="[300, 390]"
+            width="1320"
+            height="300"
+            horizAlign="center"
+            vertAlign="center"
+            wrap="true"
+            color="0xFFFFFFFF"
+            opacity="0.0">
+            <Font role="font" uri="pkg:/assets/fonts/ShareTechMono-Regular.ttf" size="54" />
+        </Label>
+
+        <Animation id="fadeIn" duration="0.75" easeFunction="inOutQuad">
+            <FloatFieldInterpolator
+                key="[0.0, 1.0]"
+                keyValue="[0.0, 1.0]"
+                fieldToInterp="intertitleLabel.opacity" />
+        </Animation>
+        <Animation id="fadeOut" duration="0.75" easeFunction="inOutQuad">
+            <FloatFieldInterpolator
+                key="[0.0, 1.0]"
+                keyValue="[1.0, 0.0]"
+                fieldToInterp="intertitleLabel.opacity" />
+        </Animation>
+        <Timer id="holdTimer" duration="2.5" repeat="false" />
+        <Timer id="exitTimer" duration="0.8" repeat="false" />
+    </children>
+</component>
+

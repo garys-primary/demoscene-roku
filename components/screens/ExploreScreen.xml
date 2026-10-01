@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="ExploreScreen" extends="Group">
+    <interface>
+        <field id="catalog" type="assocarray" onChange="onCatalogChanged" />
+        <field id="control" type="string" alwaysNotify="true" onChange="onControlChanged" />
+        <field id="navEvent" type="assocarray" alwaysNotify="true" />
+    </interface>
+    <script type="text/brightscript" uri="pkg:/source/brs/utils/catalogUtils.brs" />
+    <script type="text/brightscript" uri="pkg:/components/screens/ExploreScreen.brs" />
+
+    <children>
+        <Rectangle width="1920" height="1080" color="0x000000FF" />
+
+        <Group id="header" opacity="0.0">
+            <Label text="BROWSE" translation="[174, 72]" width="1200" height="84" color="0xFFFFFFFF">
+                <Font role="font" uri="pkg:/assets/fonts/ShareTechMono-Regular.ttf" size="64" />
+            </Label>
+            <Label id="countLabel" translation="[178, 162]" width="900" height="42" color="0x888888FF">
+                <Font role="font" uri="pkg:/assets/fonts/ShareTechMono-Regular.ttf" size="24" />
+            </Label>
+        </Group>
+
+        <Group id="gridRoot" opacity="0.0" translation="[174, 360]">
+            <Group id="clip" clippingRect="[0, 0, 1620, 740]">
+                <Group id="cardLayer">
+                    <Rectangle
+                        id="focusFrame"
+                        width="520"
+                        height="228"
+                        color="0xFFFFFFFF"
+                        opacity="0.14" />
+                </Group>
+            </Group>
+        </Group>
+
+        <Label
+            id="emptyLabel"
+            text="NO WORKS ARE READY"
+            translation="[174, 420]"
+            width="1400"
+            height="60"
+            visible="false"
+            color="0xAAAAAAFF">
+            <Font role="font" uri="pkg:/assets/fonts/ShareTechMono-Regular.ttf" size="32" />
+        </Label>
+
+        <Label
+            id="footer"
+            text="ARROWS TO MOVE   •   OK TO OPEN   •   BACK TO RETURN"
+            translation="[174, 990]"
+            width="1500"
+            height="40"
+            opacity="0.0"
+            color="0x777777FF">
+            <Font role="font" uri="pkg:/assets/fonts/ShareTechMono-Regular.ttf" size="24" />
+        </Label>
+
+        <Animation id="enterAnim" duration="0.62" easeFunction="outCubic">
+            <FloatFieldInterpolator
+                key="[0.0, 1.0]"
+                keyValue="[0.0, 1.0]"
+                fieldToInterp="header.opacity" />
+            <FloatFieldInterpolator
+                key="[0.0, 1.0]"
+                keyValue="[0.0, 1.0]"
+                fieldToInterp="footer.opacity" />
+            <FloatFieldInterpolator
+                key="[0.0, 1.0]"
+                keyValue="[0.0, 1.0]"
+                fieldToInterp="gridRoot.opacity" />
+            <Vector2DFieldInterpolator
+                key="[0.0, 1.0]"
+                keyValue="[[174.0, 360.0], [174.0, 268.0]]"
+                fieldToInterp="gridRoot.translation" />
+        </Animation>
+        <Timer id="enterDelay" duration="0.28" repeat="false" />
+    </children>
+</component>

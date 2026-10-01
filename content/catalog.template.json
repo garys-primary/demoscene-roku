@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-09-30T00:00:00Z",
+  "mediaHost": "__MEDIA_BASE_URL__",
+  "categories": [
+    {
+      "id": "exhibition",
+      "title": "Exhibition",
+      "description": "Available works from the guided list, in list order.",
+      "exhibitIds": ["01", "03", "04", "06", "07", "08", "11", "12", "13"]
+    }
+  ],
+  "exhibits": [
+    {
+      "id": "01",
+      "number": 1,
+      "title": "Crush, Crumble & Chomp cracktro",
+      "artist": "The Pirate",
+      "year": 1981,
+      "platform": "Apple II",
+      "description": "One of the earliest surviving examples of what would become the demoscene. The cracked game was modified to display \"BROKEN BY THE PIRATE 09/26/81\" before launching. It was basically digital graffiti: \"I cracked this.\" Those signatures gradually became animated, musical and increasingly elaborate - and eventually separated from the games altogether.",
+      "creditLine": "Apple II, 1981.",
+      "streams": {
+        "h264": "__MEDIA_BASE_URL__/media/01_crush_crumble_chomp_cracktro-the_pirate/master.m3u8",
+        "hevc": ""
+      },
+      "quickGuide": []
+    },
+    {
+      "id": "03",
+      "number": 3,
+      "title": "Red Sector Megademo",
+      "artist": "Red Sector Inc.",
+      "year": 1989,
+      "platform": "Amiga",
+      "description": "A defining example of the megademo era: many effects, screens, tunes and coders collected into one production. The Amiga's custom graphics and audio hardware turned demos into audiovisual shows rather than decorated loading screens. Scene veterans routinely cite the Red Sector megademo as one of the productions that established the Amiga demo tradition.",
+      "creditLine": "Amiga, 1989.",
+      "streams": {
+        "h264": "__MEDIA_BASE_URL__/media/03_red_sector_inc-rsi_megademo/master.m3u8",
+        "hevc": ""
+      },
+      "quickGuide": []
+    },
+    {
+      "id": "04",
+      "number": 4,
+      "title": "Mental Hangover",
+      "artist": "Scoopex",
+      "year": 1990,
+      "platform": "Amiga",
+      "description": "A major step toward the modern trackmo: instead of choosing separate demo parts from menus, effects flowed continuously to music as one directed presentation. It won the Swedish Elite Easter Conference 1990 and became one of the canonical early Amiga demos.",
+      "creditLine": "Amiga, 1990.",
+      "streams": {
+        "h264": "__MEDIA_BASE_URL__/media/04_scoopex-mental_hangover/master.m3u8",
+        "hevc": ""
+      },
+      "quickGuide": []
+    },
+    {
+      "id": "06",
+      "number": 6,
+      "title": "Jesus on E's",
+      "artist": "LSD",
+      "year": 1992,
+      "platform": "Amiga",
+      "description": "The demoscene collides head-on with early-90s rave culture. A roughly 27-minute, two-disk audiovisual assault using techno/rave samples, rapidly changing effects and synchronized graphics. It feels closer to a VJ set than a traditional computer demo and remains one of the weirdest, most unmistakably early-90s productions. Released 24 October 1992.",
+      "creditLine": "Amiga, 1992.",
+      "streams": {
+        "h264": "__MEDIA_BASE_URL__/media/06_jesus_on_es/master.m3u8",
+        "hevc": ""
+      },
+      "quickGuide": []
+    },
+    {
+      "id": "07",
+      "number": 7,
+      "title": "State of the Art",
+      "artist": "Spaceballs",
+      "year": 1992,
+      "platform": "Amiga",
+      "description": "Probably the most immediately recognizable Amiga demo. Rotoscoped human dancers, bold typography and abstract graphics were synchronized tightly to music instead of focusing purely on technical flexing. It won the Amiga demo competition at The Party 1992 and strongly pushed the scene toward graphic design, editing and music-video aesthetics.",
+      "creditLine": "Amiga, 1992.",
+      "streams": {
+        "h264": "__MEDIA_BASE_URL__/media/07_spaceballs_state_of_the_art/master.m3u8",
+        "hevc": ""
+      },
+      "quickGuide": []
+    },
+    {
+      "id": "08",
+      "number": 8,
+      "title": "Desert Dream",
+      "artist": "Kefrens",
+      "year": 1993,
+      "platform": "Amiga",
+      "description": "A huge, cinematic two-disk Amiga production combining 3D, elaborate transitions, graphics and Laxity's soundtrack. It represents the peak of the classic Amiga epic demo style: long, technically dense and unapologetically grandiose.",
+      "creditLine": "Amiga, 1993.",
+      "streams": {
+        "h264": "__MEDIA_BASE_URL__/media/08_kefens-desert_dream/master.m3u8",
+        "hevc": ""
+      },
+      "quickGuide": []
+    },
+    {
+      "id": "11",
+      "number": 11,
+      "title": "303",
+      "artist": "Acme",
+      "year": 1997,
+      "platform": "PC",
+      "description": "Representative of the late-90s shift from \"look at our new graphics routine\" toward design, rhythm and audiovisual direction. It won the X 1997 PC demo competition and became a classic of the more stylistically sophisticated post-Second Reality generation.",
+      "creditLine": "PC, 1997.",
+      "streams": {
+        "h264": "__MEDIA_BASE_URL__/media/11_acme-303/master.m3u8",
+        "hevc": ""
+      },
+      "quickGuide": []
+    },
+    {
+      "id": "12",
+      "number": 12,
+      "title": "Heaven Seven",
+      "artist": "Exceed",
+      "year": 2000,
+      "platform": "64 KB intro",
+      "description": "A complete audiovisual production - including 3D, textures, animation and music - inside 65,536 bytes. Its polished ray-traced visual style made the size limit almost unbelievable and helped establish the 64K intro as one of the scene's premier art forms. It won the Mekka & Symposium 2000 64K competition.",
+      "creditLine": "64 KB intro, 2000.",
+      "streams": {
+        "h264": "__MEDIA_BASE_URL__/media/12_heaven_seven-exceed/master.m3u8",
+        "hevc": ""
+      },
+      "quickGuide": []
+    },
+    {
+      "id": "13",
+      "number": 13,
+      "title": "fr-08: .the .product",
+      "artist": "Farbrausch",
+      "year": 2000,
+      "platform": "64 KB intro",
+      "description": "One of the biggest technical turning points in demoscene history. Farbrausch built procedural content-generation tools and a real-time software synthesizer, allowing a substantial 3D world plus soundtrack to fit into 64 KB. Its techniques and tools heavily influenced the following decade of size-limited demos.",
+      "creditLine": "64 KB intro, 2000.",
+      "streams": {
+        "h264": "__MEDIA_BASE_URL__/media/13_fr-08-the-product/master.m3u8",
+        "hevc": ""
+      },
+      "quickGuide": []
+    }
+  ]
+}

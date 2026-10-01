@@ -1,0 +1,21 @@
+{
+  "rootDir": ".",
+  "files": [
+    "manifest",
+    "source/**/*",
+    "components/**/*",
+    "assets/**/*",
+    "content/**/*"
+  ],
+  "stagingDir": "build/staging",
+  "retainStagingDir": true,
+  "createPackage": false,
+  "sourceMap": false,
+  "diagnosticFilters": [
+    {
+      "src": "source/main.brs",
+      "codes": [1001]
+    }
+  ]
+}
+

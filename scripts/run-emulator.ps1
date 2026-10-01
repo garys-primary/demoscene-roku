@@ -1,0 +1,1 @@
+npx --yes --package brs-node --package brs-scenegraph brs-cli --ascii 120 --unicode --ecp .\dist\demoscene-roku.zip

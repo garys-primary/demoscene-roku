@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="BootScreen" extends="Group">
+    <interface>
+        <field id="control" type="string" alwaysNotify="true" onChange="onControlChanged" />
+        <field id="navEvent" type="assocarray" alwaysNotify="true" />
+    </interface>
+    <script type="text/brightscript" uri="pkg:/source/brs/utils/catalogUtils.brs" />
+    <script type="text/brightscript" uri="pkg:/components/screens/BootScreen.brs" />
+
+    <children>
+        <Rectangle width="1920" height="1080" color="0x000000FF" />
+
+        <!--Group id="wireframe" translation="[855, 400]">
+            <Rectangle width="170" height="3" color="0xFFFFFFFF" />
+            <Rectangle translation="[0, 167]" width="170" height="3" color="0xFFFFFFFF" />
+            <Rectangle width="3" height="170" color="0xFFFFFFFF" />
+            <Rectangle translation="[167, 0]" width="3" height="170" color="0xFFFFFFFF" />
+
+            <Rectangle translation="[55, -45]" width="170" height="3" color="0xFFFFFFFF" />
+            <Rectangle translation="[55, 122]" width="170" height="3" color="0xFFFFFFFF" />
+            <Rectangle translation="[55, -45]" width="3" height="170" color="0xFFFFFFFF" />
+            <Rectangle translation="[222, -45]" width="3" height="170" color="0xFFFFFFFF" />
+
+            <Rectangle translation="[0, 0]" width="72" height="2" rotation="-0.68" color="0xFFFFFFFF" />
+            <Rectangle translation="[167, 0]" width="72" height="2" rotation="-0.68" color="0xFFFFFFFF" />
+            <Rectangle translation="[0, 167]" width="72" height="2" rotation="-0.68" color="0xFFFFFFFF" />
+            <Rectangle translation="[167, 167]" width="72" height="2" rotation="-0.68" color="0xFFFFFFFF" />
+        </Group-->
+
+        <Rectangle width="1920" height="200" color="0x000000FF" />
+        <Rectangle width="1920" height="800" color="0x000000FF" translation="[800, 0]"/>
+        <Group id="logo" translation="[760, 300]">
+        </Group>
+
+        <Label
+            text="INITIALIZING EXHIBITION"
+            translation="[560, 720]"
+            width="800"
+            height="70"
+            horizAlign="center"
+            vertAlign="center"
+            color="0xFFFFFFFF">
+            <Font role="font" uri="pkg:/assets/fonts/ShareTechMono-Regular.ttf" size="34" />
+        </Label>
+
+        <!--Animation id="spin" duration="3.2" repeat="true">
+            <FloatFieldInterpolator
+                key="[0.0, 1.0]"
+                keyValue="[0.0, 6.283185]"
+                fieldToInterp="wireframe.rotation" />
+        </Animation-->
+        <!--ParallelAnimation id="logoAnimations">
+        </ParallelAnimation-->
+
+        <Timer id="bootTimer" duration="3.2" repeat="false" />
+        <Timer id="frameTimer" duration="0.016" repeat="true" />
+    </children>
+</component>
+
