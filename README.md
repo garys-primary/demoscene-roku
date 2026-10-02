@@ -1,4 +1,4 @@
-# Roku Virtual Gallery Dedicated to Demoscene
+# Roku Demoscene Virtual Gallery
   
 The private channel can be installed with this link:  https://my.roku.com/account/add/demo (enter code DEMO)  
 
